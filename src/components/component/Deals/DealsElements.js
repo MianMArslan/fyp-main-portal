@@ -125,3 +125,17 @@ export const DealsH5 = styled.h2`
     background-color: white;
     
 `
+export const Badgespan = styled.span`
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -5px;
+    right: 75%;
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px
+`

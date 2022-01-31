@@ -11,7 +11,8 @@ DealsH3,
 DealsP,
 Button,
 DealsH4,
-DealsH5
+DealsH5,
+Badgespan
 } from './DealsElements'
 import img1 from "../../images/img1.jpg"
 import img2 from "../../images/img2.jpg"
@@ -34,7 +35,7 @@ const Deals = ({id}) => {
                 <DealsCard>
                     
                     <DealsIcon src = {img1} alt = ""></DealsIcon>
-                    <DealsH4>20% off</DealsH4>
+                    <Badgespan>20% off</Badgespan>
                     <DealsH5>RS 8000</DealsH5>
                     <DealsH3>S K A R D U</DealsH3>
                     <DealsP>T O U R</DealsP>

@@ -13,11 +13,11 @@ import{Nav,
 import  img1  from '../../images/off the beaten track.png';
 import Search from '../searchbar/search';
 const styles = {
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        width: '1px',
-        height: '70px'
+    NavbarAvater: {
+        width: '130px',
+        height: '70px',
+        borderradius: '0%',
+        cursor: 'pointer'
     }
 };
 
@@ -39,7 +39,7 @@ const Navbar = ({toggle}) => {
         <>
         <IconContext.Provider value = {{color:'Black'}}>
        <Nav scrollNav = {scrollNav}>
-       <img src = {img1} style = {styles.container} alt = " "/>
+       <img src = {img1} style = {styles.NavbarAvater}/>
             <NavbarContainer >
             <Search />
                 <NavLinks to = '/'>
@@ -100,7 +100,7 @@ const Navbar = ({toggle}) => {
                         >ABOUT</NavLinks>
                     </NavItem>
                     <NavBtn>
-                    <NavBtnLink to = "/login">Log IN</NavBtnLink>
+                    <NavBtnLink to = "/Formlogin">Log IN</NavBtnLink>
                 </NavBtn>
                 <NavBtn>
                     <NavBtnLink to = "/signup">SIGN UP</NavBtnLink>

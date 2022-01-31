@@ -1,24 +1,44 @@
 import './App.css';
 import{ BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 import Home from './pages'
-import Login from './components/component/Login/login'
 import Form from './components/component/Signup/Form'
-import Forgetpassword from './components/component/Forgetpassword/ForgetPassword';
+import Forgetform from './components/component/forget/Form';
+import Login from './components/component/loginform/Form';
+// import './components/Admin Component/pages/page.css'
+// import Sidebar from './components/Admin Component/sidebar';
+// import UserList from './components/Admin Component/pages/userList/UserList'
+// import NavbarAdmin from './components/Admin Component/Navbar';
+// import Home from './components/Admin Component/pages/home page';
+// import NewUser from './components/Admin Component/newUser/NewUser';
+// import ProductList from './components/Admin Component/pages/productList/ProductList'
+// import Product from './components/Admin Component/product/Projuct';
+// import NewProduct from './components/Admin Component/pages/newProduct/NewProduct'
+// import User from './components/Admin Component/pages/user/User'
 
 function App() {
   return (
    <Router>
-      {/* 
-      <Forgetpassword/>*/}
-      <Routes>
+      <Routes> 
         <Route path='/' element={<Home />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-      </Routes>
-      {/*  
-      
-       <Form />   */}
+        <Route path='/Formlogin' element={<Login />}></Route> 
+        <Route path='/signup' element={ <Form /> }></Route>
+        <Route path = '/forgetpassword' element = {<Forgetform/>}></Route> 
+       </Routes> 
+      {/* <NavbarAdmin />
+      <div className="container">
+        <Sidebar />
+        <Routes>
+          <Route exact path="/" element = {<Home />}></Route>
+          <Route path="/users" element = {<UserList />}></Route>
+          <Route path="/user/:userId" element = {<User />}></Route>
+          <Route path="/newUser" element = {<NewUser />}></Route>
+          <Route path="/products" element = {<ProductList />}></Route>
+          <Route path="/product/:productId"element = {<Product />}>
+          </Route><Route path="/newproduct"element = {<NewProduct />}></Route>
+            </Routes>
+      </div> */}
    </Router>
-  );
+   
+  )
 }
-
 export default App; 

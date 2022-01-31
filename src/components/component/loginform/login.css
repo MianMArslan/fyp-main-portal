@@ -9,7 +9,6 @@
     grid-template-columns: 1fr 1fr;
   }
   
-  
   .login-content-left {
     /* background-color: white; */
     border-radius: 10px 0 0 10px;
@@ -84,6 +83,7 @@
     height: 40px;
     width: 45%;
     border: solid;
+    position: sticky;
   }
   
   .login-input::placeholder {
@@ -101,7 +101,8 @@
     outline: none;
     border: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
   
   .login-input-btn:hover {
@@ -121,6 +122,7 @@
     border-color: transparent;
     margin-top: 3px;
     margin-bottom: -100%;
+    font-weight: bold;
   }
   .login-input-forgetpassword{
     font-size: 0.8rem;
