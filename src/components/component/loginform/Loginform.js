@@ -7,6 +7,7 @@ import img1 from '../../images/off the beaten track.png'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Snackbar from '../snakebar';
 import  axios from 'axios';
+import {POST} from '../../../services/httpClient.js'
 
 const LoginForm = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
@@ -15,21 +16,10 @@ const LoginForm = ({ submitForm }) => {
   );
   const [isloading , setLoading] = useState(false);
     const [post, setPost] = useState(null)
-  const login = () =>{
-    console.warn(values)
-    setLoading(true);
-   axios.post("http://localhost:4001/auth/login",{values},{
-   method : "POST",
-   headers: {
-      'Accept':'application/json',
-      'Content-Type': 'application/json',
-   },
-   body:JSON.stringify(values)
-  })
-   .then(res=>{
-     console.log(res.values)
-   })
-  }
+  const login = async (values) =>{
+  let res=await POST('http://localhost:4001/auth/login',values)
+    
+}
       
 
   const [state, setState] = useState(false);
@@ -73,7 +63,7 @@ const LoginForm = ({ submitForm }) => {
             type= {state ? "text" : "password"}
             name='password'
             placeholder='Enter your password'
-            value={values.password}
+            value = {values.password}
             onChange={handleChange}
           />
           
@@ -89,7 +79,7 @@ const LoginForm = ({ submitForm }) => {
         </span></div>
        { !isloading && 
        <button className='login-input-btn' type='submit'
-        onClick= {login}>
+        onClick= {()=>{login(values)}}>
           Log in
         </button>
          } 
