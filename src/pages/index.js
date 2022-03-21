@@ -36,11 +36,7 @@ const Home = () => {
         <Destination {...homeObjthree}/>
         <Deals {...homeObjtwo}/>
         <Aboutpage {...homeObjOne} />
-        <Footer {...homeObjfour}/> 
-    
-
-        
-    
+        <Footer {...homeObjfour}/>  
         </>
     )
     }
