@@ -41,48 +41,48 @@ const FormSignup = ({ submitForm }) => {
 
   const [isloading, setLoading] = useState(false);
 
-  //  const signup = () =>{
-  //    console.warn(values)
-  //    setLoading(true);
+  const signup = () => {
+    console.warn(values);
+    setLoading(true);
 
-  //    fetch("http://localhost:4001/auth/registration",{
-  //       method: 'POST',
-  //       headers:{
-  //         'Accept': 'application/json',
-  //         'Content-Type':'application/json'
-  //       },
-  //       body:JSON.stringify(values)
-  //    }).then((result)=>{
-  //      console.warn("result",result);
-  //    })
-  //   }
+    fetch("http://localhost:4001/auth/registration", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    }).then((result) => {
+      console.warn("result", result);
+    });
+  };
 
   const [selected, setSelected] = useState("--Role--");
 
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
+  // const handleClose = (event, reason) => {
+  //   if (reason === "clickaway") {
+  //     return;
+  //   }
 
-    setOpen(false);
-  };
-  const signup = async (values) => {
-    setLoading(true);
-    let res = await POST("{{BASE_URL_FYP}}/auth/registration", values);
-    console.log(signup);
-    if (res == 200) {
-      setMessage(
-        "Email is Successfully send kindly verify your email with in 15 minutes"
-      );
-      setOpen(true);
-      setSeverity("success");
-    } else {
-      setMessage("Unable to send your email");
-      setOpen(true);
-      setSeverity("error");
-    }
-    setLoading(false);
-  };
+  //   setOpen(false);
+  // };
+  // const signup = async (values) => {
+  //   setLoading(true);
+  //   let res = await POST("{{BASE_URL_FYP}}/auth/registration", values);
+  //   console.log(signup);
+  //   if (res == 200) {
+  //     setMessage(
+  //       "Email is Successfully send kindly verify your email with in 15 minutes"
+  //     );
+  //     setOpen(true);
+  //     setSeverity("success");
+  //   } else {
+  //     setMessage("Unable to send your email");
+  //     setOpen(true);
+  //     setSeverity("error");
+  //   }
+  //   setLoading(false);
+  // };
   // const [selected, setSelected] = useState("--Role--");
   return (
     <div className="form-content-right">
