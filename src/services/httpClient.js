@@ -29,7 +29,9 @@ export async function POST(url, params) {
   try {
     const response = await httpClient.post(url, params);
     return response.data;
-  } catch (error) {}
+  } catch (error) {
+    return error?.response;
+  }
 }
 
 export async function DELETE(url, params) {

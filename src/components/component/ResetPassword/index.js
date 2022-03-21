@@ -38,13 +38,29 @@ const ResetPassword = ({ submitForm }) => {
     }
     setOpen(false);
   };
+
+  const validateRequest = (values) => {
+    setLoading(true);
+    if (!values.password) {
+      setType("error");
+      setsnakbarMessage("Password is required!");
+      setOpen(true);
+      setLoading(false);
+    } else if (values.password.length < 6) {
+      setType("error");
+      setsnakbarMessage("Password must be greater then 6 letters!");
+      setOpen(true);
+      setLoading(false);
+    } else {
+      Reset(values);
+    }
+  };
+
   const Reset = async (values) => {
     let token = searchParams.get("token");
     values.token = token;
-    console.log(values);
     setLoading(true);
     let res = await POST("http://localhost:4001/auth/reset-password", values);
-    console.log(res);
     if (res?.code === 200) {
       setType("success");
       setTimeout(() => {
@@ -79,13 +95,12 @@ const ResetPassword = ({ submitForm }) => {
                   value={values.email}
                   onChange={handleChange}
                 />
-                {errors.password && <p>{errors.password}</p>}
               </div>
               <button
                 className="login-input-btn"
                 type="submit"
                 onClick={() => {
-                  Reset(values);
+                  validateRequest(values);
                 }}
               >
                 {isloading && <CircularProgress />}
