@@ -1,9 +1,16 @@
-import './App.css';
-import{ BrowserRouter as Router, Route,Routes} from 'react-router-dom';
-import Home from './pages'
-import Form from './components/component/Signup/Form'
-import Forgetform from './components/component/forget/Form';
-import Login from './components/component/loginform/Form';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages";
+import Form from "./components/component/Signup/Form";
+import Forgetform from "./components/component/forget/Form";
+import Login from "./components/component/loginform/Form";
+import Resetform from "./components/component/ResetPassword/Reset";
+// import NavbarAgency from './components/AgencyPortal/Navbar/Navbar';
+// import SidebarAgency from './components/AgencyPortal/Sidebar';
+// import Carddeals from './components/AgencyPortal/Deals';
+// import '../src/pages/page.css'
+// import Order from './components/AgencyPortal/Orders';
+// import Order from './components/AgencyPortal/Orders';
 // import './components/Admin Component/pages/page.css'
 // import Sidebar from './components/Admin Component/sidebar';
 // import UserList from './components/Admin Component/pages/userList/UserList'
@@ -17,17 +24,30 @@ import Login from './components/component/loginform/Form';
 
 function App() {
   return (
-   <Router>
-      <Routes> 
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/Formlogin' element={<Login />}></Route> 
-        <Route path='/signup' element={ <Form /> }></Route>
-        <Route path = '/forgetpassword' element = {<Forgetform/>}></Route> 
-       </Routes> 
-      {/* <NavbarAdmin />
-      <div className="container">
-        <Sidebar />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/Formlogin" element={<Login />}></Route>
+        <Route path="/signup" element={<Form />}></Route>
+        <Route path="/forgetpassword" element={<Forgetform />}></Route>
+        <Route path="/resetpassword" element={<Resetform />}></Route>
+      </Routes>
+      {/* <NavbarAgency />
+      <div className='container'>
+        <SidebarAgency />
         <Routes>
+        <Route path = "/deals" element={<Carddeals />}></Route>
+        <Route path = "/order" element={<Order />}></Route>
+
+        </Routes> */}
+      {/* </div> */}
+    </Router>
+  );
+}
+export default App;
+
+{
+  /* <Routes>
           <Route exact path="/" element = {<Home />}></Route>
           <Route path="/users" element = {<UserList />}></Route>
           <Route path="/user/:userId" element = {<User />}></Route>
@@ -35,10 +55,5 @@ function App() {
           <Route path="/products" element = {<ProductList />}></Route>
           <Route path="/product/:productId"element = {<Product />}>
           </Route><Route path="/newproduct"element = {<NewProduct />}></Route>
-            </Routes>
-      </div> */}
-   </Router>
-   
-  )
+            </Routes> */
 }
-export default App; 

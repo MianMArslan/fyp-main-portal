@@ -1,8 +1,6 @@
-
-import React, { useState} from 'react';
-import '../loginform/login.css';
-import ForgetPassword from './Forgetpassword'
-
+import React, { useState } from "react";
+import "../loginform/login.css";
+import ForgetPassword from "./Forgetpassword";
 
 const Forgetform = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -11,11 +9,10 @@ const Forgetform = () => {
     setIsSubmitted(true);
   }
 
-
   return (
     <>
-        <div>
-          <ForgetPassword submitForm={submitForm} />
+      <div>
+        <ForgetPassword submitForm={submitForm} />
       </div>
     </>
   );
