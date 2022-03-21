@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import validate from "./validateInfo";
 import useForm from "./useForm";
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import Home from "../../../pages";
 import "../loginform/login.css";
 import img1 from "../../images/off the beaten track.png";
@@ -26,7 +26,9 @@ const ForgetPassword = ({ submitForm }) => {
     let res = await POST("http://localhost:4001/auth/forgot-password", values);
     if (res?.code === 200) {
       setType("success");
-      setSuccess(true);
+      setTimeout(() => {
+        setSuccess(true);
+      }, 1000);
       setOpen(true);
       setLoading(false);
       setsnakbarMessage("Email is successfully sent!");
@@ -90,6 +92,7 @@ const ForgetPassword = ({ submitForm }) => {
           )}
         </div>
       </div>
+      {success && <Navigate to={"/"} replace />}
     </div>
   );
 };
