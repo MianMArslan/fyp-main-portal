@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 const httpClient = axios.create({
   baseURL: `http://localhost:4001/`,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
   withCredentials: true,
 });
@@ -11,7 +11,7 @@ const httpClient = axios.create({
 const httpFileUpload = axios.create({
   baseURL: `http://localhost:4001/`,
   headers: {
-    'content-type': 'multipart/form-data',
+    "content-type": "multipart/form-data",
   },
   withCredentials: true,
 });
@@ -28,10 +28,8 @@ export async function GET(url, params) {
 export async function POST(url, params) {
   try {
     const response = await httpClient.post(url, params);
-    return response.data.data;
-  } catch (error) {
-    console.error(error);
-  }
+    return response.data;
+  } catch (error) {}
 }
 
 export async function DELETE(url, params) {

@@ -1,32 +1,31 @@
-import React, { useState, forwardRef, useImperativeHandle } from "react";
-import "./Snackbar.css";
+import * as React from "react";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
-const Snackbar = forwardRef((props, ref) => {
-  const [showSnackbar, setShowSnackbar] = useState(false);
-
-  useImperativeHandle(ref, () => ({
-    show() {
-      setShowSnackbar(true);
-      setTimeout(() => {
-        setShowSnackbar(false);
-      }, 3000);
-    },
-  }));
-  return (
-    <div
-      className="snackbar"
-      id={showSnackbar ? "show" : "hide"}
-      style={{
-        backgroundColor: props.type === "success" ? "#00F593" : "#FF0033",
-        color: props.type === "success" ? "black" : "white",
-      }}
-    >
-      <div className="symbol">
-        {props.type === "success" ? <h1>&#x2713;</h1> : <h1>&#x2613;</h1>}
-      </div>
-      <div className="message">{props.message}</div>
-    </div>
-  );
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-export default Snackbar;
+export default function CustomizedSnackbars(props) {
+  const { open, setOpen, type, message } = props;
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  return (
+    <Snackbar
+      open={open}
+      autoHideDuration={2000}
+      onClose={handleClose}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+    >
+      <Alert onClose={handleClose} severity={type} sx={{ width: "100%" }}>
+        {message}
+      </Alert>
+    </Snackbar>
+  );
+}
