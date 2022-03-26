@@ -5,6 +5,10 @@ import Form from "./components/component/Signup/Form";
 import Forgetform from "./components/component/forget/Form";
 import Login from "./components/component/loginform/Form";
 import Resetform from "./components/component/ResetPassword/Reset";
+import { TermsCondition } from "./components/component/Terms and Conditions";
+import EmailSent from "./components/component/EmailVerification";
+import EmailMessage from "./components/component/EmailVerification/Emailmessage";
+// import { Exampleform } from "./components/component/form";
 // import NavbarAgency from './components/AgencyPortal/Navbar/Navbar';
 // import SidebarAgency from './components/AgencyPortal/Sidebar';
 // import Carddeals from './components/AgencyPortal/Deals';
@@ -31,7 +35,10 @@ function App() {
         <Route path="/signup" element={<Form />}></Route>
         <Route path="/forgetpassword" element={<Forgetform />}></Route>
         <Route path="/resetpassword" element={<Resetform />}></Route>
+        <Route path="/termsandconditions" element={<TermsCondition />}></Route>
+        <Route path="/EmailSent" element = {<EmailSent />} ></Route>
       </Routes>
+      {/* <EmailMessage /> */}
       {/* <NavbarAgency />
       <div className='container'>
         <SidebarAgency />

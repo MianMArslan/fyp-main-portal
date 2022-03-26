@@ -2,12 +2,14 @@ import React, { useRef, useState } from "react";
 import validate from "./validateInfo";
 import useForm from "./useForm";
 import { Navigate } from "react-router-dom";
-import Home from "../../../pages";
+import { TextField } from "@mui/material";
 import "../loginform/login.css";
 import img1 from "../../images/off the beaten track.png";
 import Snackbar from "../snakebar";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { POST } from "../../../services/httpClient.js";
+import { Box } from "@mui/material";
+
 
 const ForgetPassword = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
@@ -30,8 +32,8 @@ const ForgetPassword = ({ submitForm }) => {
         setSuccess(true);
       }, 1000);
       setOpen(true);
-      setLoading(false);
       setsnakbarMessage("Email is successfully sent!");
+      setLoading(false);
     } else if (validator?.email) {
       setType("error");
       setsnakbarMessage(validator.email);
@@ -39,7 +41,7 @@ const ForgetPassword = ({ submitForm }) => {
       setLoading(false);
     } else {
       setType("error");
-      setsnakbarMessage(res);
+      setsnakbarMessage("Unable to send the Email");
       setOpen(true);
       setLoading(false);
     }
@@ -51,19 +53,28 @@ const ForgetPassword = ({ submitForm }) => {
         <img className="login-img" src={img1} />
         <div className="login-content-right">
           <form onSubmit={handleSubmit} className="login" noValidate>
-            <h1>Forget Password</h1>
+            <h1>Forget Password</h1> 
+            <Box
+      sx={{
+        m :1,
+        width: 550,
+        maxWidth: '100%',
+      }}
+    >
             <div className="login-inputs">
-              <label className="login-label">Email</label>
-              <input
-                className="login-input"
+              <TextField
+                label = "Email"
                 type="email"
+                fullWidth
                 name="email"
                 placeholder="Enter your email"
+                variant="standard"
                 value={values.email}
                 onChange={handleChange}
               />
-              {errors.email && <p>{errors.email}</p>}
             </div>
+          {errors.email && <p>{errors.email}</p>}
+        </Box>
             {!isloading && (
               <button
                 className="login-input-btn"
@@ -99,13 +110,3 @@ const ForgetPassword = ({ submitForm }) => {
 
 export default ForgetPassword;
 
-{
-  /* <Snackbar
-ref={snackbarRef}
-message = "Successfully Updated"
-type = {SnackbarType.success}
-/>  
-()=>{
-          snackbarRef.current.show();
-*/
-}

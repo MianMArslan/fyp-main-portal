@@ -6,13 +6,10 @@ const useForm = (callback, validate) => {
     firstname: '',
     lastname: '',
     email: '',
-    interest:'',
-    role: '',
     password: ''
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -40,7 +37,7 @@ const useForm = (callback, validate) => {
 
   
 
-  return { handleChange, handleSubmit, values, errors };
+  return { handleChange, handleSubmit, values, errors,};
 };
 
 export default useForm;

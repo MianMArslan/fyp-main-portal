@@ -7,6 +7,8 @@ import img1 from "../../images/off the beaten track.png";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Snackbar from "../snakebar";
 import { POST } from "../../../services/httpClient.js";
+import { TextField } from "@mui/material";
+import { Box } from "@mui/system";
 
 const LoginForm = ({ submitForm }) => {
   const { handleChange, handleSubmit, values } = useForm(submitForm);
@@ -59,24 +61,33 @@ const LoginForm = ({ submitForm }) => {
         <div className="login-content-right">
           <form onSubmit={handleSubmit} className="login">
             <h1>Log in</h1>
+            <Box
+      sx={{
+        m :1,
+        width: 550,
+        maxWidth: '100%',
+      }}
+    >
             <div className="login-inputs">
-              <label className="login-label">Email</label>
-              <input
-                className="login-input"
+              <TextField
+                label = "Email"
                 type="email"
+                fullWidth
                 name="email"
                 placeholder="Enter your email"
+                variant="standard"
                 value={values.email}
                 onChange={handleChange}
               />
             </div>
             <div className="login-inputs">
-              <label className="login-label">Password</label>
-              <input
-                className="login-input"
+              <TextField
+                label = "Password"
                 type={state ? "text" : "password"}
                 name="password"
                 placeholder="Enter your password"
+                fullWidth
+                variant="standard"
                 value={values.password}
                 onChange={handleChange}
               />
@@ -84,6 +95,7 @@ const LoginForm = ({ submitForm }) => {
                 {state ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
               </button>
             </div>
+            </Box>
             <div>
               <span className="login-input-forgetpassword">
                 <a href="/forgetpassword">Forget password?</a>
