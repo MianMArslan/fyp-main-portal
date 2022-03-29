@@ -48,10 +48,12 @@ const SidebarAgency = () => {
               <TrendingUpIcon className="sidebarIcon" />
               Manage Deals
             </li>
+            <Link to="/NewDeals" className='link'>
             <li className="sidebarListItem">
               <TrendingUpIcon className="sidebarIcon" />
               Add new Deals
             </li>
+            </Link>
           </ul>
         </div>
         </div>

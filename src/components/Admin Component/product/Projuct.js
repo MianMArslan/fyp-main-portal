@@ -36,7 +36,7 @@ export default function Product() {
                       <span className="productInfoValue">yes</span>
                   </div>
                   <div className="productInfoItem">
-                      <span className="productInfoKey">in stock:</span>
+                      <span className="productInfoKey">is Available:</span>
                       <span className="productInfoValue">no</span>
                   </div>
               </div>
@@ -47,7 +47,7 @@ export default function Product() {
               <div className="productFormLeft">
                   <label>Product Name</label>
                   <input type="text" placeholder=" New Destination" />
-                  <label>In Stock</label>
+                  <label>Is Available</label>
                   <select name="inStock" id="idStock">
                       <option value="yes">Yes</option>
                       <option value="no">No</option>

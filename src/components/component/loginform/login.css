@@ -1,16 +1,15 @@
 .login-container {
-    margin: 100px auto;
-    width: 1500px;
+    margin: 50px auto;
+    width: 1000px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 550px;
+    height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   
   .login-content-left {
-    /* background-color: white; */
     border-radius: 10px 0 0 10px;
     position: relative;
     margin-right: -100%;
@@ -18,20 +17,19 @@
   }
   
   .login-img {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 70%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
   }
 
   .login-content-right {
     border-radius: 0 10px 10px 0;
     position: relative;
-    margin-top: 150px;
-    margin-left: -90%;
-    /* background-color: white; */
+    margin-top: 90px;
+    margin-left: -100%;
   }
   
   .form {
@@ -94,7 +92,7 @@
   .login-input-btn {
     width: 15%;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 190px;
     border-radius: 2px;
     background-color: #fcdc00;
@@ -115,7 +113,7 @@
     transform: translateX(320px) translateY(-40px);
     font-size: 1.6rem;
     padding: 0.15rem;
-    margin-left: 2.5rem;
+    margin-left: 5.5rem;
     cursor: pointer;
     background-color: transparent;
     outline: none;
@@ -129,7 +127,6 @@
     color: black;
     width: 80%;
     margin-left: 450px;
-    margin-top: 2px;
   }
 
   .login-input-forgetpassword a{

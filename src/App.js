@@ -1,20 +1,19 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages";
-import Form from "./components/component/Signup/Form";
+// import Home from "./pages";
 import Forgetform from "./components/component/forget/Form";
 import Login from "./components/component/loginform/Form";
 import Resetform from "./components/component/ResetPassword/Reset";
 import { TermsCondition } from "./components/component/Terms and Conditions";
-import EmailSent from "./components/component/EmailVerification";
 import EmailMessage from "./components/component/EmailVerification/Emailmessage";
-// import { Exampleform } from "./components/component/form";
-// import NavbarAgency from './components/AgencyPortal/Navbar/Navbar';
-// import SidebarAgency from './components/AgencyPortal/Sidebar';
-// import Carddeals from './components/AgencyPortal/Deals';
-// import '../src/pages/page.css'
-// import Order from './components/AgencyPortal/Orders';
-// import Order from './components/AgencyPortal/Orders';
+import Signup from "./components/component/Signup/SignupForm";
+import NavbarAgency from './components/AgencyPortal/Navbar/Navbar';
+import SidebarAgency from './components/AgencyPortal/Sidebar';
+import Carddeals from './components/AgencyPortal/Deals';
+import '../src/pages/page.css'
+import Order from './components/AgencyPortal/Orders';
+import NewDeals from "./components/AgencyPortal/Adddeal/adddeal";
+
 // import './components/Admin Component/pages/page.css'
 // import Sidebar from './components/Admin Component/sidebar';
 // import UserList from './components/Admin Component/pages/userList/UserList'
@@ -29,32 +28,19 @@ import EmailMessage from "./components/component/EmailVerification/Emailmessage"
 function App() {
   return (
     <Router>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/Formlogin" element={<Login />}></Route>
-        <Route path="/signup" element={<Form />}></Route>
-        <Route path="/forgetpassword" element={<Forgetform />}></Route>
-        <Route path="/resetpassword" element={<Resetform />}></Route>
-        <Route path="/termsandconditions" element={<TermsCondition />}></Route>
-        <Route path="/EmailSent" element = {<EmailSent />} ></Route>
-      </Routes>
-      {/* <EmailMessage /> */}
-      {/* <NavbarAgency />
+        <Route path="/Login" element={<Login />}></Route>
+        <Route path="/Signup" element={<Signup/>}></Route>
+        <Route path="/ForgetPassword" element={<Forgetform />}></Route>
+        <Route path="/ResetPassword" element={<Resetform />}></Route>
+        <Route path="/TermsAndConditions" element={<TermsCondition />}></Route>
+        <Route path = "EmailMessage" element = {<EmailMessage />}></Route>
+      </Routes> */}
+      {/* <NavbarAdmin />
       <div className='container'>
-        <SidebarAgency />
+      <Sidebar />
         <Routes>
-        <Route path = "/deals" element={<Carddeals />}></Route>
-        <Route path = "/order" element={<Order />}></Route>
-
-        </Routes> */}
-      {/* </div> */}
-    </Router>
-  );
-}
-export default App;
-
-{
-  /* <Routes>
           <Route exact path="/" element = {<Home />}></Route>
           <Route path="/users" element = {<UserList />}></Route>
           <Route path="/user/:userId" element = {<User />}></Route>
@@ -62,5 +48,19 @@ export default App;
           <Route path="/products" element = {<ProductList />}></Route>
           <Route path="/product/:productId"element = {<Product />}>
           </Route><Route path="/newproduct"element = {<NewProduct />}></Route>
-            </Routes> */
+            </Routes>
+            </div> */}
+
+      <NavbarAgency />
+      <div className='container'>
+        <SidebarAgency />
+        <Routes>
+        <Route path = "/Deals" element={<Carddeals />}></Route>
+        <Route path = "/Order" element={<Order />}></Route>
+        <Route path = "/NewDeals" element={<NewDeals />}></Route>
+        </Routes>
+      </div>
+    </Router>
+  );
 }
+export default App;

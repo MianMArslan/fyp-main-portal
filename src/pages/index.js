@@ -6,13 +6,13 @@ import Services from '../components/component/Services';
 import Destination from '../components/component/Destinations';
 import Deals from '../components/component/Deals';
 import Aboutpage from '../components/component/AboutPage';
-import { homeObjOne} from '../components/component/AboutPage/Data';
+import { homeObjOne} from '../components/component/AboutPage';
 import Footer from '../components/component/footer/footer';
-import { homeObjtwo } from '../components/component/Deals/Data';
-import { homeObjthree } from '../components/component/Destinations/Data';
-import { homeObjfour } from '../components/component/footer/Data';
-import { homeObjfive } from '../components/component/Services/Data';
-import { homeObjSix } from '../components/component/Hero/Data';
+import { homeObjtwo } from '../components/component/Deals';
+import { homeObjthree } from '../components/component/Destinations';
+import { homeObjfour } from '../components/component/footer/footer';
+import { homeObjfive } from '../components/component/Services';
+import { homeObjSix } from '../components/component/Hero';
 
 
 

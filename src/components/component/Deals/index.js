@@ -22,6 +22,10 @@ function clickMe(){
     alert("you clicked me")
 }
 
+export const homeObjtwo = {
+    id:'deals'
+}
+
 const Deals = ({id}) => {
     useEffect(() => {
         Aos.init({ duration:3000 });

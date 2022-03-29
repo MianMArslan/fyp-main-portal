@@ -1,10 +1,10 @@
 .form-container {
-  margin: 100px auto;
-  width: 1500px;
+  margin: 10px auto;
+  width: 1000px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
-  height: 750px;
+  height: 590px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -86,7 +86,7 @@
   border-radius: 2px;
   height: 40px;
   width: 100%;
-  border: solid;
+  /* border: solid; */
 }
 
 .form-input::placeholder {
@@ -136,7 +136,7 @@
     transform: translateX(320px) translateY(-40px);
     font-size: 1.6rem;
     padding: 0.15rem;
-    margin-left: 10rem;
+    margin-left: 0.75rem;
     cursor: pointer;
     background-color: transparent;
     outline: none;
@@ -162,7 +162,7 @@ input[type=checkbox] + label {
   cursor: pointer;
   padding: 0.2em;
   float: left;
-  margin-left: -55%;
+  margin-left: -35%;
 }
 
 input[type=checkbox] {
