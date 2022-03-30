@@ -35,7 +35,7 @@ function App() {
         <Route path="/ForgetPassword" element={<Forgetform />}></Route>
         <Route path="/ResetPassword" element={<Resetform />}></Route>
         <Route path="/TermsAndConditions" element={<TermsCondition />}></Route>
-        <Route path="EmailMessage" element={<EmailMessage />}></Route>
+        <Route path="/emailMessage" element={<EmailMessage />}></Route>
       </Routes>
       {/* <NavbarAdmin />
       <div className='container'>
