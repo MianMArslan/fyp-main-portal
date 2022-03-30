@@ -60,7 +60,7 @@ const ResetPassword = ({ submitForm }) => {
     let token = searchParams.get("token");
     values.token = token;
     setLoading(true);
-    let res = await POST("http://localhost:4001/auth/reset-password", values);
+    let res = await POST("/auth/reset-password", values);
     if (res?.code === 200) {
       setType("success");
       setTimeout(() => {

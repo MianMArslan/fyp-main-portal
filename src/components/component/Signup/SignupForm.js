@@ -39,6 +39,11 @@ const Signup = () => {
   const [type, setType] = useState(false);
   const [snakbarMessage, setsnakbarMessage] = useState(false);
 
+  const resetForm = () => {
+    setFormValues(initialValues);
+    setInterset("");
+    setRole("");
+  };
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -77,10 +82,6 @@ const Signup = () => {
       setType("error");
       setsnakbarMessage("Password must be more than 8 characters");
       setOpen(true);
-    } else if (values.password.length > 20) {
-      setType("error");
-      setsnakbarMessage("Password cannot exceed more than 20 characters");
-      setOpen(true);
     } else return true;
   };
   const create = async (formValues) => {
@@ -95,7 +96,21 @@ const Signup = () => {
     } else {
       formValues.interest = Interset;
       formValues.roleId = parseInt(Role);
-      console.log(formValues);
+      setLoading(true);
+      let res = await POST("/auth/registration", formValues);
+      if (res?.code === 200) {
+        setType("success");
+        setOpen(true);
+        setLoading(false);
+        setsnakbarMessage(res?.message);
+        resetForm();
+      } else {
+        setType("error");
+        setOpen(true);
+        setLoading(false);
+        setsnakbarMessage(res?.message);
+        resetForm();
+      }
     }
   };
 
