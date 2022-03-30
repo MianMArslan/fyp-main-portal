@@ -23,7 +23,6 @@ const ForgetPassword = ({ submitForm }) => {
   const [snakbarMessage, setsnakbarMessage] = useState(false);
   const [validator, setValidator] = useState(false);
   const forget = async (values) => {
-    console.log(values);
     setLoading(true);
     let res = await POST("/auth/forgot-password", values);
     if (res?.code === 200) {
@@ -41,7 +40,7 @@ const ForgetPassword = ({ submitForm }) => {
       setLoading(false);
     } else {
       setType("error");
-      setsnakbarMessage("Unable to send the Email");
+      setsnakbarMessage(res?.data?.message);
       setOpen(true);
       setLoading(false);
     }
