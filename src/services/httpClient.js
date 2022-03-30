@@ -28,10 +28,9 @@ export async function GET(url, params) {
 export async function POST(url, params) {
   try {
     const response = await httpClient.post(url, params);
-    console.log(response);
     return response.data;
   } catch (error) {
-    return error?.response.data;
+    return error?.response;
   }
 }
 

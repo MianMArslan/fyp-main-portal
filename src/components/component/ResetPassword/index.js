@@ -116,7 +116,7 @@ const ResetPassword = ({ submitForm }) => {
               )}
             </form>
           </div>
-          {success && <Navigate to={"/Formlogin"} replace />}
+          {success && <Navigate to={"/Login"} replace />}
         </div>
       </div>
     </div>

@@ -10,7 +10,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import { POST } from "../../../services/httpClient.js";
 import { Box } from "@mui/material";
 
-
 const ForgetPassword = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
@@ -24,8 +23,9 @@ const ForgetPassword = ({ submitForm }) => {
   const [snakbarMessage, setsnakbarMessage] = useState(false);
   const [validator, setValidator] = useState(false);
   const forget = async (values) => {
+    console.log(values);
     setLoading(true);
-    let res = await POST("http://localhost:4001/auth/forgot-password", values);
+    let res = await POST("/auth/forgot-password", values);
     if (res?.code === 200) {
       setType("success");
       setTimeout(() => {
@@ -53,28 +53,28 @@ const ForgetPassword = ({ submitForm }) => {
         <img className="login-img" src={img1} />
         <div className="login-content-right">
           <form onSubmit={handleSubmit} className="login" noValidate>
-            <h1>Forget Password</h1> 
+            <h1>Forget Password</h1>
             <Box
-      sx={{
-        m :1,
-        width: 550,
-        maxWidth: '100%',
-      }}
-    >
-            <div className="login-inputs">
-              <TextField
-                label = "Email"
-                type="email"
-                fullWidth
-                name="email"
-                placeholder="Enter your email"
-                variant="standard"
-                value={values.email}
-                onChange={handleChange}
-              />
-            </div>
-          {errors.email && <p>{errors.email}</p>}
-        </Box>
+              sx={{
+                m: 1,
+                width: 550,
+                maxWidth: "100%",
+              }}
+            >
+              <div className="login-inputs">
+                <TextField
+                  label="Email"
+                  type="email"
+                  fullWidth
+                  name="email"
+                  placeholder="Enter your email"
+                  variant="standard"
+                  value={values.email}
+                  onChange={handleChange}
+                />
+              </div>
+              {errors.email && <p>{errors.email}</p>}
+            </Box>
             {!isloading && (
               <button
                 className="login-input-btn"
@@ -109,4 +109,3 @@ const ForgetPassword = ({ submitForm }) => {
 };
 
 export default ForgetPassword;
-

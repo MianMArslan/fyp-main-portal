@@ -44,7 +44,7 @@ const LoginForm = ({ submitForm }) => {
 
   const login = async (values) => {
     setLoading(true);
-    let res = await POST("http://localhost:4001/auth/login", values);
+    let res = await POST("/auth/login", values);
     console.log(res);
   };
 
@@ -62,39 +62,39 @@ const LoginForm = ({ submitForm }) => {
           <form onSubmit={handleSubmit} className="login">
             <h1>Log in</h1>
             <Box
-      sx={{
-        m :1,
-        width: 550,
-        maxWidth: '100%',
-      }}
-    >
-            <div className="login-inputs">
-              <TextField
-                label = "Email"
-                type="email"
-                fullWidth
-                name="email"
-                placeholder="Enter your email"
-                variant="standard"
-                value={values.email}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="login-inputs">
-              <TextField
-                label = "Password"
-                type={state ? "text" : "password"}
-                name="password"
-                placeholder="Enter your password"
-                fullWidth
-                variant="standard"
-                value={values.password}
-                onChange={handleChange}
-              />
-              <button className="login-btn" onClick={toggleBtn}>
-                {state ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
-              </button>
-            </div>
+              sx={{
+                m: 1,
+                width: 550,
+                maxWidth: "100%",
+              }}
+            >
+              <div className="login-inputs">
+                <TextField
+                  label="Email"
+                  type="email"
+                  fullWidth
+                  name="email"
+                  placeholder="Enter your email"
+                  variant="standard"
+                  value={values.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="login-inputs">
+                <TextField
+                  label="Password"
+                  type={state ? "text" : "password"}
+                  name="password"
+                  placeholder="Enter your password"
+                  fullWidth
+                  variant="standard"
+                  value={values.password}
+                  onChange={handleChange}
+                />
+                <button className="login-btn" onClick={toggleBtn}>
+                  {state ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+                </button>
+              </div>
             </Box>
             <div>
               <span className="login-input-forgetpassword">
