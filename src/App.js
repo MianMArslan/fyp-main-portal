@@ -7,6 +7,7 @@ import Resetform from "./components/component/ResetPassword/Reset";
 import { TermsCondition } from "./components/component/Terms and Conditions";
 import EmailMessage from "./components/component/EmailVerification/Emailmessage";
 import Signup from "./components/component/Signup/SignupForm";
+import ResendVerificationEmail from "./components/component/resendVerificaionEmail/index";
 import SidebarAgency from "./components/AgencyPortal/Sidebar";
 import Carddeals from "./components/AgencyPortal/Deals";
 import "../src/pages/page.css";
@@ -35,6 +36,10 @@ function App() {
         <Route path="/ResetPassword" element={<Resetform />}></Route>
         <Route path="/TermsAndConditions" element={<TermsCondition />}></Route>
         <Route path="/emailMessage" element={<EmailMessage />}></Route>
+        <Route
+          path="/resendVerificationEmail"
+          element={<ResendVerificationEmail />}
+        ></Route>
       </Routes>
       {/* <NavbarAdmin />
       <div className='container'>

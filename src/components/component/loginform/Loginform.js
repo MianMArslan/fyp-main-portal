@@ -120,6 +120,14 @@ const LoginForm = ({ submitForm }) => {
               message={snakbarMessage}
             />
           )}
+          <span className="login-input-resendVerificationEmail">
+            <p>Not Registered Yet?</p>
+            <a href="/Signup">Sign Up</a>
+          </span>
+          <span className="login-input-resendVerificationEmail">
+            <p>Trouble while login</p>
+            <a href="/resendVerificationEmail">Activate Account</a>
+          </span>
         </div>
       </div>
     </div>
