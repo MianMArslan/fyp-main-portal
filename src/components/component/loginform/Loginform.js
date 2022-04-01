@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import useForm from "./useform";
 import "./login.css";
@@ -13,13 +13,12 @@ import { Box } from "@mui/system";
 const LoginForm = ({ submitForm }) => {
   const { handleChange, handleSubmit, values } = useForm(submitForm);
   const [isloading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [agency, setAgency] = useState(false);
   const [open, setOpen] = useState(false);
   const [type, setType] = useState(false);
   const [snakbarMessage, setsnakbarMessage] = useState(false);
 
   const validateRequest = (values) => {
-    console.log(values);
     setLoading(true);
     if (!values.email) {
       setType("error");
@@ -45,13 +44,33 @@ const LoginForm = ({ submitForm }) => {
   const login = async (values) => {
     setLoading(true);
     let res = await POST("/auth/login", values);
-    console.log(res);
+    if (res.code == 200) {
+      setLoading(false);
+      setType("success");
+      setOpen(true);
+      console.log(res.data.userRole.title);
+      setsnakbarMessage(res?.message);
+      if (res.data.userRole.title == "agency") {
+        setAgency(true);
+      }
+    } else {
+      setType("error");
+      setOpen(true);
+      setLoading(false);
+      setsnakbarMessage(res?.data.message);
+    }
   };
 
   const [state, setState] = useState(false);
 
   const toggleBtn = () => {
     setState((prevState) => !prevState);
+  };
+  const NavigateExternal = ({ to }) => {
+    useEffect(() => {
+      window.location.href = to;
+    }, []);
+    return null;
   };
 
   return (
@@ -128,6 +147,7 @@ const LoginForm = ({ submitForm }) => {
             <p>Trouble while login</p>
             <a href="/resendVerificationEmail">Activate Account</a>
           </span>
+          {agency && <NavigateExternal to="http://localhost:3001/" />}
         </div>
       </div>
     </div>
