@@ -9,6 +9,11 @@ import { HeroContainer,
     HeroH1,
     HeroP
 } from './HeroElements';
+
+export const homeObjSix = {
+    id:'home'
+}
+
 const HeroElements = ({id}) => {
         useEffect(() => {
             Aos.init({ duration:4000 });

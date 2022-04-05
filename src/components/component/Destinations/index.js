@@ -13,10 +13,16 @@ import img1 from "../../images/img1.jpg";
 import img2 from "../../images/img2.jpg";
 import img3 from "../../images/img3.jpg";
 
+export const homeObjthree = {
+    id:'destination'
+}
+
 const Destination = ({id}) => {
         useEffect(() => {
             Aos.init({ duration:2000 });
         }, [])
+
+        
     return (
         <>
              <DestinationContainer id ={id}>

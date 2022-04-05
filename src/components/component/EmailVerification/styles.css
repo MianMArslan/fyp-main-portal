@@ -1,0 +1,14 @@
+.mainbody{
+    height: 750px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    width: 600px;
+    background-color: transparent;
+    height: 250px;
+    color: #ffa000;
+    font-size: 1.5rem;
+    }

@@ -7,11 +7,9 @@ export const DealsContainer = styled.div`
     justify-content: center;
     align-items: center;
     background:#ffba46;
-
     @media screen and (max-width: 768px){
         height:1100px;
     }
-
     @media screen and (max-width:480px){
         height:1300px;
     }
@@ -24,16 +22,13 @@ export const DealsWrapper = styled.div`
     align-items: center;
     grid-gap: 16px;
     padding: 0 50px;
-
     @media screen and (max-width: 1000px){
         grid-template-columns: 1fr 1fr;
     }
-
     @media screen and (max-width:768px){
         grid-template-columns: 1fr;
         padding: 0 20px;
     }
-
 ` 
 
 export const DealsCard = styled.div`
@@ -47,7 +42,6 @@ export const DealsCard = styled.div`
     padding: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
-
     &:hover{
         transform: scale(1.02);
         transition:all 0.2s ease-in-out;
@@ -64,7 +58,6 @@ export const DealsH1 = styled.h1`
     color: #fff;
     margin-bottom: 24px;
     margin-top: 120px;
-
     @media screen and (max-width: 480px){
         font-size: 2rem
     }
@@ -74,7 +67,6 @@ export const DealsH2 = styled.h2`
     font-size: 1.5rem;
     color: #ffa000;
     margin-bottom: 40px;
-
 `
 export const DealsH3 = styled.h3`
     font-size: 1rem;
@@ -124,4 +116,18 @@ export const DealsH5 = styled.h2`
     margin-bottom: 40px;
     background-color: white;
     
+`
+export const Badgespan = styled.span`
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -5px;
+    right: 75%;
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px
 `

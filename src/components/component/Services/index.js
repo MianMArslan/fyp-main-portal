@@ -14,6 +14,10 @@ import img1 from "../../images/img1.jpg"
 import img2 from "../../images/img2.jpg"
 import img3 from "../../images/img3.jpg"
 
+export const homeObjfive = {
+    id:'services'
+}
+
 const Services = ({id}) => {
     useEffect(() => {
         Aos.init({ duration:3000 });
