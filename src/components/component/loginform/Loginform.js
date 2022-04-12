@@ -45,8 +45,8 @@ const LoginForm = ({ submitForm }) => {
     setLoading(true);
     let data = window.navigator.geolocation.getCurrentPosition(
       async (data) => {
-        console.log(data.coords);
-        values.coords = data.coords;
+        values.latitude = data.coords.latitude;
+        values.longitude = data.coords.longitude;
         let res = await POST("/auth/login", values);
         if (res.code == 200) {
           setLoading(false);
