@@ -43,22 +43,34 @@ const LoginForm = ({ submitForm }) => {
 
   const login = async (values) => {
     setLoading(true);
-    let res = await POST("/auth/login", values);
-    if (res.code == 200) {
-      setLoading(false);
-      setType("success");
-      setOpen(true);
-      console.log(res.data.userRole.title);
-      setsnakbarMessage(res?.message);
-      if (res.data.userRole.title == "agency") {
-        setAgency(true);
+    let data = window.navigator.geolocation.getCurrentPosition(
+      async (data) => {
+        values.latitude = data.coords.latitude;
+        values.longitude = data.coords.longitude;
+        let res = await POST("/auth/login", values);
+        if (res.code == 200) {
+          setLoading(false);
+          setType("success");
+          setOpen(true);
+          setsnakbarMessage(res?.message);
+          if (res.data.userRole.title == "agency") {
+            setAgency(true);
+          }
+        } else {
+          setType("error");
+          setOpen(true);
+          setLoading(false);
+          setsnakbarMessage(res?.data.message);
+        }
+        return data;
+      },
+      (err) => {
+        setType("error");
+        setOpen(true);
+        setLoading(false);
+        setsnakbarMessage("Allow Location");
       }
-    } else {
-      setType("error");
-      setOpen(true);
-      setLoading(false);
-      setsnakbarMessage(res?.data.message);
-    }
+    );
   };
 
   const [state, setState] = useState(false);
