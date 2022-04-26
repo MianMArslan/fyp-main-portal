@@ -57,6 +57,12 @@ export const Sociallogo1 = styled(Link)`
 export const WebsiteRight = styled.small`
     color: #fff;
     margin-bottom: 16px;
+
+    @media screen and (max-width: 768px){
+        display: flex;
+        align-items: center;
+        margin-left: -90px
+    }
    
 `
 
