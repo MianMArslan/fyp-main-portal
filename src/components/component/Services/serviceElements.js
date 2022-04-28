@@ -23,7 +23,7 @@ export const ServicesWrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     grid-gap: 16px;
-    padding: 0 50px;
+    padding: 0 0px;
 
     @media screen and (max-width: 1000px){
         grid-template-columns: 1fr 1fr;
@@ -71,22 +71,10 @@ export const ServicesH1 = styled.h1`
 
 `
 
-export const ServicesH2 = styled.h2`
-    font-size: 1.5rem;
-    color:#ffa000;
-    margin-bottom: 10px;
-
-`
 export const ServicesH3 = styled.h3`
     font-size: 1rem;
     margin-top: 20px;
     margin-bottom: 40px;
     text-align:center;
     
-`
-export const ServicesP = styled.p`
-    font-size: 1rem;
-    margin-top: -20px;
-    margin-bottom: 40px;
-    text-align:center;
 `
