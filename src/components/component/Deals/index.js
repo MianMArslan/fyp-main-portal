@@ -11,7 +11,10 @@ DealsH3,
 DealsP,
 Button,
 Badgespan,
+<<<<<<< HEAD
 DealBtnLink
+=======
+>>>>>>> abc365aa6cd9993948403b627ae3889ae7a38ab3
 } from './DealsElements'
 import img1 from "../../images/img1.jpg"
 import img2 from "../../images/img2.jpg"

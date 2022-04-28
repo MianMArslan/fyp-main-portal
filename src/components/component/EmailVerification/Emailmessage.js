@@ -1,4 +1,3 @@
-import { NoEncryption } from "@material-ui/icons";
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 import { useSearchParams } from "react-router-dom";
@@ -41,7 +40,6 @@ const EmailMessage = () => {
                 borderRadius: "2px",
                 backgroundColor: "#ffa000",
                 outline: "none",
-                borderRadius: "1rem",
                 border: "none",
                 color: "#fff",
                 cursor: "pointer",

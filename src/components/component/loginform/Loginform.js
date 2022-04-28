@@ -14,6 +14,7 @@ const LoginForm = ({ submitForm }) => {
   const { handleChange, handleSubmit, values } = useForm(submitForm);
   const [isloading, setLoading] = useState(false);
   const [agency, setAgency] = useState(false);
+  const [admin, setAdmin] = useState(false);
   const [open, setOpen] = useState(false);
   const [type, setType] = useState(false);
   const [snakbarMessage, setsnakbarMessage] = useState(false);
@@ -48,14 +49,15 @@ const LoginForm = ({ submitForm }) => {
         values.latitude = data.coords.latitude;
         values.longitude = data.coords.longitude;
         let res = await POST("/auth/login", values);
-        if (res.code == 200) {
+        if (res.code === 200) {
           setLoading(false);
           setType("success");
           setOpen(true);
           setsnakbarMessage(res?.message);
-          if (res.data.userRole.title == "agency") {
+          if (res.data.userRole.title === "agency") {
             setAgency(true);
           }
+          if (res.data.userRole.title === "admin") setAdmin(true);
         } else {
           setType("error");
           setOpen(true);
@@ -160,6 +162,7 @@ const LoginForm = ({ submitForm }) => {
             <a href="/resendVerificationEmail">Activate Account</a>
           </span>
           {agency && <NavigateExternal to="http://localhost:3001/" />}
+          {admin && <NavigateExternal to="http://localhost:3002/" />}
         </div>
       </div>
     </div>

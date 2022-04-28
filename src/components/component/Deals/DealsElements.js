@@ -2,17 +2,17 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 
 export const DealsContainer = styled.div`
-    height: 800px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background:#ffba46;
     @media screen and (max-width: 768px){
-        height:1100px;
+        height:1400px;
     }
     @media screen and (max-width:480px){
-        height:1300px;
+        height:1500px;
     }
 `
 export const DealsWrapper = styled.div`
@@ -98,6 +98,7 @@ export const Button = styled.button`
     &:hover{
         background-color:#ffa000;
     }
+<<<<<<< HEAD
 ` 
 export const Badgespan = styled.span`
     width: 100px;
@@ -121,3 +122,17 @@ export const DealBtnLink = styled(LinkR)`
    text-decoration: none;
 
 `;
+=======
+`
+export const Badgespan = styled.span`
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    text-align:center;
+    background-color: #ffa000;
+
+`
+>>>>>>> abc365aa6cd9993948403b627ae3889ae7a38ab3
