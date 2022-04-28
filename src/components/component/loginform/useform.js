@@ -1,11 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 const useForm = (callback, validate) => {
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,14 +16,7 @@ const useForm = (callback, validate) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setIsSubmitting(true);
   };
-
-  // useEffect(() => {
-  //   if (Object.keys(errors).length === 0 && isSubmitting) {
-  //     callback();
-  //   }
-  // }, [errors]);
 
   return { handleChange, handleSubmit, values };
 };
