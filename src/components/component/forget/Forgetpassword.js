@@ -49,7 +49,7 @@ const ForgetPassword = ({ submitForm }) => {
   return (
     <div className="login-container">
       <div className="login-content-left">
-        <img className="login-img" src={img1} />
+        <img className="login-img" src={img1} alt="" />
         <div className="login-content-right">
           <form onSubmit={handleSubmit} className="login" noValidate>
             <h1>Forget Password</h1>

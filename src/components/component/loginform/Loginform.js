@@ -49,15 +49,15 @@ const LoginForm = ({ submitForm }) => {
         values.latitude = data.coords.latitude;
         values.longitude = data.coords.longitude;
         let res = await POST("/auth/login", values);
-        if (res.code == 200) {
+        if (res.code === 200) {
           setLoading(false);
           setType("success");
           setOpen(true);
           setsnakbarMessage(res?.message);
-          if (res.data.userRole.title == "agency") {
+          if (res.data.userRole.title === "agency") {
             setAgency(true);
           }
-          if (res.data.userRole.title == "admin") setAdmin(true);
+          if (res.data.userRole.title === "admin") setAdmin(true);
         } else {
           setType("error");
           setOpen(true);
