@@ -46,7 +46,7 @@ const Navbar = ({ toggle }) => {
             alt="logo of the website"
           />
           <NavbarContainer>
-            {/* <Search /> */}
+            <Search />
             <NavLinks to="/"></NavLinks>
             <MobileIcon onClick={toggle}>
               <FaBars />

@@ -6,7 +6,7 @@ import { SidebarContainer,
     SidebarMenu,
     SidebarLink,
     SideBtnWrap,
-    SidebarRoute,
+    SidebarRoute
 } from './SideBarElements'
 
 
@@ -21,8 +21,8 @@ const Sidebar = ({isOpen,toggle}) => {
                         <SidebarLink to = 'home' onClick={toggle}>HOME</SidebarLink>
                         <SidebarLink to = 'about' onClick={toggle}>ABOUT</SidebarLink>
                         <SidebarLink to = 'services' onClick={toggle}>SERVICES</SidebarLink>
-                        <SidebarLink to = 'signup' onClick={toggle}>DESTINATION</SidebarLink>
-                        <SidebarLink to = 'signup' onClick={toggle}>DEALS</SidebarLink>
+                        <SidebarLink to = 'destination' onClick={toggle}>DESTINATION</SidebarLink>
+                        <SidebarLink to = 'deals' onClick={toggle}>DEALS</SidebarLink>
                         <SidebarLink to = 'contact' onClick={toggle}>CONTACT</SidebarLink>
 
                     </SidebarMenu>

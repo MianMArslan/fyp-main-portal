@@ -5,9 +5,10 @@ import { DestinationContainer,
 DestinationH1,
 DestinationWrapper,
 DestinationP,
-DestinationIcon,DestinationH3,
-DestinationH2,DestinationCard,
-//DestinationButton
+DestinationIcon,
+DestinationH3,
+DestinationH2,
+DestinationCard
 } from './destinationElements'
 import img1 from "../../images/img1.jpg";
 import img2 from "../../images/img2.jpg";

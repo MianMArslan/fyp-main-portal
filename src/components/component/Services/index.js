@@ -1,13 +1,15 @@
 import React , {useEffect}from 'react'
 import Aos from 'aos'
 import "aos/dist/aos.css"
-import { ServicesContainer,
+import
+{ ServicesContainer,
 ServicesH1,
 ServicesWrapper,
 ServicesCard,
 ServicesIcon,
 ServicesH3
-} from './serviceElements'
+} 
+from './serviceElements'
 import img1 from "../../images/agency.png"
 import img2 from "../../images/secure.jpeg"
 import img3 from "../../images/chat.jpeg"

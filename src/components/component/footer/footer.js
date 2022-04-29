@@ -8,7 +8,7 @@ import { FContainer, FContent, FooterContainer,
     Socialmedia,
     SocialmediaWrap,
     Mainfooter,
-    WebsiteRight,
+    WebsiteRight
 } from './footerElements'
 import {SiGmail} from "react-icons/si"
 import {FaFacebook,FaInstagram,FaPhone} from "react-icons/fa"

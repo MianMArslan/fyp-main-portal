@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import "./Form.css";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { POST } from "../../../services/httpClient.js";
@@ -45,7 +45,6 @@ const Signup = () => {
     setRole("");
   };
   const validate = (values) => {
-    const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.firstname.trim()) {
       setType("error");

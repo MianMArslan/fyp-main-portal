@@ -90,7 +90,7 @@ const LoginForm = ({ submitForm }) => {
   return (
     <div className="login-container">
       <div className="login-content-left">
-        <img className="login-img" src={img1} />
+        <img className="login-img" src={img1} alt = "Website logo" />
         <div className="login-content-right">
           <form onSubmit={handleSubmit} className="login">
             <h1>Log in</h1>

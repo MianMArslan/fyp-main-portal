@@ -98,23 +98,7 @@ export const Button = styled.button`
     &:hover{
         background-color:#ffa000;
     }
-<<<<<<< HEAD
 ` 
-export const Badgespan = styled.span`
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: -5px;
-    right: 75%;
-    background-color: red;
-    color: white;
-    border-radius: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px
-`
-
 export const DealBtnLink = styled(LinkR)`
    color: white;
    font-size: 14px;
@@ -122,17 +106,3 @@ export const DealBtnLink = styled(LinkR)`
    text-decoration: none;
 
 `;
-=======
-`
-export const Badgespan = styled.span`
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: absolute;
-    margin-top: -30px;
-    margin-bottom: 40px;
-    text-align:center;
-    background-color: #ffa000;
-
-`
->>>>>>> abc365aa6cd9993948403b627ae3889ae7a38ab3

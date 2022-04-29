@@ -10,11 +10,7 @@ DealsH2,
 DealsH3,
 DealsP,
 Button,
-Badgespan,
-<<<<<<< HEAD
 DealBtnLink
-=======
->>>>>>> abc365aa6cd9993948403b627ae3889ae7a38ab3
 } from './DealsElements'
 import img1 from "../../images/img1.jpg"
 import img2 from "../../images/img2.jpg"
@@ -37,8 +33,6 @@ const Deals = ({id}) => {
             <DealsWrapper data-aos = 'fade-up'>
                 <DealsCard>
                     <DealsIcon src = {img1} alt = ""></DealsIcon>
-                    <Badgespan>20% off <br />
-                    RS 8000</Badgespan>
                     <DealsH3>S K A R D U</DealsH3>
                     <DealsP>T O U R</DealsP>
                     <Button>
@@ -47,8 +41,6 @@ const Deals = ({id}) => {
                 </DealsCard>
                 <DealsCard>
                     <DealsIcon src = {img2} alt = ""></DealsIcon>
-                    <Badgespan>30% off <br />
-                    RS 5000</Badgespan>
                     <DealsH3>T R A N S P O R T</DealsH3>
                     <DealsP>T O U R</DealsP>
                     <Button>
@@ -57,8 +49,6 @@ const Deals = ({id}) => {
                     </DealsCard>
                 <DealsCard>
                     <DealsIcon src = {img3} alt = ""></DealsIcon>
-                    <Badgespan>50% off <br />
-                    RS 7000</Badgespan>
                     <DealsH3>H U N Z A</DealsH3>
                     <DealsP>T O U R</DealsP>
                     <Button>

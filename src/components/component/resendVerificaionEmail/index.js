@@ -12,7 +12,6 @@ const ResendVerificationEmail = () => {
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [success, setSuccess] = useState(false);
-  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

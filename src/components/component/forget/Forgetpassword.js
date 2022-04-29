@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import validate from "./validateInfo";
 import useForm from "./useForm";
 import { Navigate } from "react-router-dom";
@@ -11,7 +11,7 @@ import { POST } from "../../../services/httpClient.js";
 import { Box } from "@mui/material";
 
 const ForgetPassword = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmit, values} = useForm(
     submitForm,
     validate
   );
@@ -72,7 +72,6 @@ const ForgetPassword = ({ submitForm }) => {
                   onChange={handleChange}
                 />
               </div>
-              {errors.email && <p>{errors.email}</p>}
             </Box>
             {!isloading && (
               <button
