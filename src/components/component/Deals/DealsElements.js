@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const DealsContainer = styled.div`
     height: 700px;
@@ -97,15 +98,11 @@ export const Button = styled.button`
     &:hover{
         background-color:#ffa000;
     }
-`
-export const Badgespan = styled.span`
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: absolute;
-    margin-top: -30px;
-    margin-bottom: 40px;
-    text-align:center;
-    background-color: #ffa000;
+` 
+export const DealBtnLink = styled(LinkR)`
+   color: white;
+   font-size: 14px;
+   font-weight: bold;
+   text-decoration: none;
 
-`
+`;

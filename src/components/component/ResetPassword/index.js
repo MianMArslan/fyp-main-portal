@@ -10,38 +10,17 @@ import { POST } from "../../../services/httpClient.js";
 import { useSearchParams, Navigate } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Snackbar from "../snakebar";
-import MuiAlert from "@material-ui/lab/Alert";
-import { makeStyles } from "@material-ui/core/styles";
 const ResetPassword = ({ submitForm }) => {
-  let { handleChange, handleSubmit, values, errors } = useForm(
+  let { handleChange, handleSubmit, values } = useForm(
     submitForm,
     validate
   );
-  const Alert = (props) => {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-  };
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      width: "100%",
-      "& > * + *": {
-        marginTop: theme.spacing(2),
-      },
-    },
-  }));
-  const classes = useStyles();
   const [isloading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [open, setOpen] = React.useState(false);
   const [type, setType] = React.useState(false);
   const [snakbarMessage, setsnakbarMessage] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpen(false);
-  };
-
   const [state, setState] = useState(false);
 
   const toggleBtn = () => {
@@ -87,7 +66,6 @@ const ResetPassword = ({ submitForm }) => {
     setLoading(false);
   };
   return (
-    <div className={classes.root}>
       <div className="login-container">
         <div className="login-content-left">
           <img className="login-img" src={img1} alt="logo of the website" />
@@ -140,7 +118,6 @@ const ResetPassword = ({ submitForm }) => {
           {success && <Navigate to={"/Login"} replace />}
         </div>
       </div>
-    </div>
   );
 };
 export default ResetPassword;
