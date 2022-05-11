@@ -14,6 +14,7 @@ const LoginForm = ({ submitForm }) => {
   const { handleChange, handleSubmit, values } = useForm(submitForm);
   const [isloading, setLoading] = useState(false);
   const [agency, setAgency] = useState(false);
+  const [tourist, setTourist] = useState(false);
   const [admin, setAdmin] = useState(false);
   const [open, setOpen] = useState(false);
   const [type, setType] = useState(false);
@@ -54,10 +55,9 @@ const LoginForm = ({ submitForm }) => {
           setType("success");
           setOpen(true);
           setsnakbarMessage(res?.message);
-          if (res.data.userRole.title === "agency") {
-            setAgency(true);
-          }
+          if (res.data.userRole.title === "agency") setAgency(true);
           if (res.data.userRole.title === "admin") setAdmin(true);
+          if (res.data.userRole.title === "tourist") setTourist(true);
         } else {
           setType("error");
           setOpen(true);
@@ -163,6 +163,7 @@ const LoginForm = ({ submitForm }) => {
           </span>
           {agency && <NavigateExternal to="http://localhost:3001/" />}
           {admin && <NavigateExternal to="http://localhost:3002/" />}
+          {tourist && <NavigateExternal to="http://localhost:3003/" />}
         </div>
       </div>
     </div>
