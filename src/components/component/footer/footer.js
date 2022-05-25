@@ -13,9 +13,6 @@ import { FContainer, FContent, FooterContainer,
 import {SiGmail} from "react-icons/si"
 import {FaFacebook,FaInstagram,FaPhone} from "react-icons/fa"
 
-export const homeObjfour = {
-    id:'contact'
-}
 
 const Footer = ({
     id
@@ -24,7 +21,7 @@ const Footer = ({
         scroll.scrollToTop();
     }
     return (
-        <FooterContainer id = {id}>
+        <FooterContainer>
             <FooterWrap>
             <Socialmedia>
              <SocialmediaWrap>
