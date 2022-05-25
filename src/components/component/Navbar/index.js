@@ -12,7 +12,7 @@ import {
   NavBtn,
 } from "./NavbarElement";
 import img1 from "../../images/off the beaten track.png";
-import Search from "../searchbar/search";
+// import Search from "../searchbar/search";
 const styles = {
   NavbarAvater: {
     width: "130px",
@@ -46,7 +46,7 @@ const Navbar = ({ toggle }) => {
             alt="logo of the website"
           />
           <NavbarContainer>
-            <Search />
+            {/* <Search /> */}
             <NavLinks to="/"></NavLinks>
             <MobileIcon onClick={toggle}>
               <FaBars />

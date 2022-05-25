@@ -6,13 +6,14 @@ import Services from '../components/component/Services';
 import Destination from '../components/component/Destinations';
 import Deals from '../components/component/Deals';
 import Aboutpage from '../components/component/AboutPage';
+import ContactUs from "../components/component/ContactUs"
 import { homeObjOne} from '../components/component/AboutPage';
 import Footer from '../components/component/footer/footer';
 import { homeObjtwo } from '../components/component/Deals';
 import { homeObjthree } from '../components/component/Destinations';
-import { homeObjfour } from '../components/component/footer/footer';
 import { homeObjfive } from '../components/component/Services';
 import { homeObjSix } from '../components/component/Hero';
+import { homeObjfour } from '../components/component/ContactUs';
 
 
 
@@ -36,7 +37,8 @@ const Home = () => {
         <Destination {...homeObjthree}/>
         <Deals {...homeObjtwo}/>
         <Aboutpage {...homeObjOne} />
-        <Footer {...homeObjfour}/>  
+        <ContactUs {...homeObjfour} />
+        <Footer/>  
         </>
     )
     }

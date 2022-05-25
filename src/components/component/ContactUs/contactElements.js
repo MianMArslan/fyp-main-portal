@@ -72,14 +72,6 @@ export const Heading = styled.div`
     font-size: 32px;
   }
 `;
-
-export const Subtitle = styled.div`
-  max-width: 440px;
-  margin-bottom: 35px;
-  font-size: 18px;
-  line-height: 24px;
-  color: ${({ darkText }) => (darkText ? "black" : "black")};
-`;
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
@@ -90,7 +82,19 @@ export const Img = styled.img`
   margin: 0 0 10px 0;
   padding-right: 0;
 `;
-export const BtnWrap = styled.div`
-  display: flex;
-  justify-content: flex-start;
+export const Button = styled.button`
+  background-color: #fcdc00;
+  width: 30%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background-color: #ffa000;
+  }
 `;
