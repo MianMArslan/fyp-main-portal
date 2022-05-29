@@ -10,9 +10,6 @@ import { POST } from "../../../services/httpClient.js";
 import { TextField } from "@mui/material";
 import { Box } from "@mui/system";
 
-// Call the function from this file 
-import {SetCookie, RemoveCookie} from "../Cookies/setCookies"
-
 const LoginForm = ({ submitForm }) => {
   const { handleChange, handleSubmit, values } = useForm(submitForm);
   const [isloading, setLoading] = useState(false);
@@ -54,10 +51,6 @@ const LoginForm = ({ submitForm }) => {
         values.longitude = data.coords.longitude;
         let res = await POST("/auth/login", values);
         if (res.code === 200) {
-          // use for remove the cookies
-          // RemoveCookie('name')
-          // use to create the cookies
-          // SetCookie('name', JSON.stringify(res.data))
           setLoading(false);
           setType("success");
           setOpen(true);
@@ -178,7 +171,3 @@ const LoginForm = ({ submitForm }) => {
 };
 
 export default LoginForm;
-
-// On logout function Call
- 
-// RemoveCookie('name');
