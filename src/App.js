@@ -8,6 +8,7 @@ import EmailMessage from "./components/component/EmailVerification/Emailmessage"
 import Signup from "./components/component/Signup/SignupForm";
 import ResendVerificationEmail from "./components/component/resendVerificaionEmail/index";
 import ResetPassword from "./components/component/ResetPassword";
+// import CreateCookie from "./components/component/Cookies/setCookies";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           element={<ResendVerificationEmail />}
         ></Route>
       </Routes>
+     
+      {/* <CreateCookie /> */}
     </Router>
   );
 }
