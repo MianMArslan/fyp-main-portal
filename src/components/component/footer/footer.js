@@ -50,7 +50,7 @@ const Footer = ({ id }) => {
           <FContent>
             <WebsiteRight>
               &copy; All Rights Reserved. {new Date().getFullYear()} Powered by
-              Rapid Solutions
+              vTechServe
             </WebsiteRight>
           </FContent>
         </FContainer>
