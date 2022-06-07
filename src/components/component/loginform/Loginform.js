@@ -162,7 +162,7 @@ const LoginForm = ({ submitForm }) => {
             <a href="/resendVerificationEmail">Activate Account</a>
           </span>
           {agency && <NavigateExternal to="http://agency.vtechserve.com/" />}
-          {admin && <NavigateExternal to="http://admin.vtechserve.com/" />}
+          {admin && <NavigateExternal to="https://admin.vtechserve.com/" />}
           {tourist && <NavigateExternal to="http://tourist.vtechserve.com/" />}
         </div>
       </div>
