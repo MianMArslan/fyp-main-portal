@@ -90,7 +90,7 @@ const LoginForm = ({ submitForm }) => {
   return (
     <div className="login-container">
       <div className="login-content-left">
-        <img className="login-img" src={img1} alt = "Website logo" />
+        <img className="login-img" src={img1} alt="Website logo" />
         <div className="login-content-right">
           <form onSubmit={handleSubmit} className="login">
             <h1>Log in</h1>
@@ -161,9 +161,9 @@ const LoginForm = ({ submitForm }) => {
             <p>Trouble while login</p>
             <a href="/resendVerificationEmail">Activate Account</a>
           </span>
-          {agency && <NavigateExternal to="http://localhost:3001/" />}
-          {admin && <NavigateExternal to="http://localhost:3002/" />}
-          {tourist && <NavigateExternal to="http://localhost:3003/" />}
+          {agency && <NavigateExternal to="https://agency.vtechserve.com/" />}
+          {admin && <NavigateExternal to="https://admin.vtechserve.com/" />}
+          {tourist && <NavigateExternal to="https://tourist.vtechserve.com/" />}
         </div>
       </div>
     </div>
