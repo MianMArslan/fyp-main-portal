@@ -14,11 +14,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/Login" element={<LoginForm />}></Route>
-        <Route path="/Signup" element={<Signup />}></Route>
-        <Route path="/ForgetPassword" element={<ForgetPassword />}></Route>
-        <Route path="/ResetPassword" element={<ResetPassword />}></Route>
-        <Route path="/TermsAndConditions" element={<TermsCondition />}></Route>
+        <Route path="/login" element={<LoginForm />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/forgetPassword" element={<ForgetPassword />}></Route>
+        <Route path="/resetPassword" element={<ResetPassword />}></Route>
+        <Route path="/termsAndConditions" element={<TermsCondition />}></Route>
         <Route path="/emailMessage" element={<EmailMessage />}></Route>
         <Route
           path="/resendVerificationEmail"

@@ -26,8 +26,6 @@
 
 .form {
   position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   height: 100%;
@@ -42,7 +40,6 @@
   text-align: start;
   width: 100%;
   margin-left: 20px;
-  margin-bottom: 1rem;
   color: black;
 }
 
@@ -79,14 +76,15 @@
 }
 
 .form-input-btn {
-  width: 40%;
+  width: 30%;
   height: 50px;
-  margin-top: 10px;
-  border-radius: 2px;
+  margin-top: 25px;
+  border-radius: 25px;
   outline: none;
   border: none;
   color: #fff;
   font-size: 1rem;
+  background-color: #fcdc00;
 }
 
 .form-input-btn:hover {

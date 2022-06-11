@@ -10,6 +10,8 @@ import { POST } from "../../../services/httpClient.js";
 import { useSearchParams, Navigate } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Snackbar from "../snakebar";
+import "./styles.css"
+
 const ResetPassword = ({ submitForm }) => {
   let { handleChange, handleSubmit, values } = useForm(
     submitForm,
@@ -70,7 +72,7 @@ const ResetPassword = ({ submitForm }) => {
         <div className="login-content-left">
           <img className="login-img" src={img1} alt="logo of the website" />
           <div className="login-content-right">
-            <form onSubmit={handleSubmit} className="login" noValidate>
+            <form onSubmit={handleSubmit} className= "login reset" noValidate>
               <h1>Reset Password</h1>
               <Box
                 sx={{
@@ -103,7 +105,7 @@ const ResetPassword = ({ submitForm }) => {
                 }}
               >
                 {isloading && <CircularProgress />}
-                {!isloading && <span>Reset Password</span>}
+                {!isloading && <span>Reset</span>}
               </button>
               {open && (
                 <Snackbar

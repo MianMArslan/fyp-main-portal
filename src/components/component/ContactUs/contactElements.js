@@ -17,6 +17,7 @@ export const InfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
 `;
 
 export const InfoRow = styled.div`
@@ -27,8 +28,7 @@ export const InfoRow = styled.div`
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
+    grid-template-areas: 'col2';
   }
 `;
 
@@ -36,6 +36,9 @@ export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
+  @media screen and (max-width: 768px) {
+  max-width: 450px;
+  }
 `;
 export const Column2 = styled.div`
   margin-bottom: 15px;

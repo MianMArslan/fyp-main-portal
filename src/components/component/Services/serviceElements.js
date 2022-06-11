@@ -18,7 +18,7 @@ export const ServicesContainer = styled.div`
 `
 export const ServicesWrapper = styled.div`
     max-width: 1000px;
-    margin: 0 auto;
+    margin-left: -100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -32,6 +32,8 @@ export const ServicesWrapper = styled.div`
     @media screen and (max-width:768px){
         grid-template-columns: 1fr;
         padding: 0 20px;
+        margin-left: 15px;
+
     }
 
 ` 

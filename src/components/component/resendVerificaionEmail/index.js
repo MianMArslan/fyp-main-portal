@@ -73,7 +73,7 @@ const ResendVerificationEmail = () => {
       </div>
       <div className="form-content-right">
         <form onSubmit={handleSubmit} className="form">
-          <h1>Resend Verification Email</h1>
+          <h1 style={{marginTop:"30px"}}>Resend Verification Email</h1>
           <Box sx={{ width: 650, maxWidth: "100%" }}>
             <div className="form-inputs">
               <TextField
