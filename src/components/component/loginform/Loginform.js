@@ -49,6 +49,7 @@ const LoginForm = ({ submitForm }) => {
       async (data) => {
         values.latitude = data.coords.latitude;
         values.longitude = data.coords.longitude;
+        console.log(values)
         let res = await POST("/auth/login", values);
         if (res.code === 200) {
           setLoading(false);

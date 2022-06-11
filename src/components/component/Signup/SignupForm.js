@@ -184,7 +184,7 @@ const Signup = () => {
             </div>
             <FormControl
               variant="standard"
-              sx={{ m: 1, width: 360, maxWidth: "90%" }}
+              sx={{ m: 0, width: 360, maxWidth: "100%"}}
               onChange={handleChange}
             >
               <InputLabel id="demo-simple-select-standard-label">
@@ -213,7 +213,7 @@ const Signup = () => {
             </FormControl>
             <FormControl
               variant="standard"
-              sx={{ m: 1, width: 360, maxWidth: "100%" }}
+              sx={{ m: 0, width: 360, maxWidth: "100%" }}
             >
               <InputLabel id="demo-simple-select-standard-label">
                 --Role-
@@ -233,6 +233,7 @@ const Signup = () => {
               </Select>
             </FormControl>
           </Box>
+          <div className="form-input1">
           <input
             type="checkbox"
             id="check1"
@@ -254,8 +255,9 @@ const Signup = () => {
             </a>
           </label>
           <br></br>
+          </div>
           <button
-            className="form-input-btn"
+            className="form-btn"
             type="submit"
             disabled={!Checked}
             onClick={async () => {

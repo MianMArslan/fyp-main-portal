@@ -82,7 +82,7 @@ const ForgetPassword = ({ submitForm }) => {
                   forget(values);
                 }}
               >
-                Forget Password
+                Send Link
               </button>
             )}
             {isloading && (

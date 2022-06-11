@@ -48,11 +48,11 @@
 }
 
 .login-input-btn {
-  width: 15%;
+  width: 10%;
   height: 50px;
   margin-top: 15px;
   margin-left: 190px;
-  border-radius: 2px;
+  border-radius: 25px;
   background-color: #fcdc00;
   outline: none;
   border: none;
