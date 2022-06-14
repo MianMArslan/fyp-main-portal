@@ -103,12 +103,14 @@ const Signup = () => {
         setLoading(false);
         setsnakbarMessage(res?.message);
         resetForm();
+        setChecked(false);
       } else {
         setType("error");
         setOpen(true);
         setLoading(false);
         setsnakbarMessage(res?.message);
         resetForm();
+        setChecked(false);
       }
     }
   };
@@ -129,7 +131,7 @@ const Signup = () => {
       </div>
       <div className="form-content-right">
         <form onSubmit={handleSubmit} className="form">
-          <h1>Signup</h1>
+          <h1 className="form-h1">Signup</h1>
           <Box sx={{ width: 650, maxWidth: "100%" }}>
             <div className="form-inputs">
               <TextField
@@ -239,6 +241,7 @@ const Signup = () => {
             id="check1"
             name="check-1"
             className="Checkbox"
+            checked = {Checked}
             onChange={TxtChange}
           />
           <label for="check1">

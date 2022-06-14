@@ -67,15 +67,15 @@ const ResendVerificationEmail = () => {
   };
 
   return (
-    <div className="form-container">
-      <div className="form-content-left">
-        <img className="form-img" src={img1} alt="logo of the website" />
+    <div className="resend-container">
+      <div className="resend-content-left">
+        <img className="resend-img" src={img1} alt="logo of the website" />
       </div>
-      <div className="form-content-right">
-        <form onSubmit={handleSubmit} className="form">
-          <h1 style={{marginTop:"30px"}}>Resend Verification Email</h1>
-          <Box sx={{ width: 650, maxWidth: "100%" }}>
-            <div className="form-inputs">
+      <div className="resend-content-right">
+        <form onSubmit={handleSubmit} className="resend">
+          <h1 className="resend-h1">Resend Verification Email</h1>
+          <Box sx={{ m:1, width: 550, maxWidth: "100%" }}>
+            <div className="resend-inputs">
               <TextField
                 label="Email"
                 type="email"
@@ -89,7 +89,7 @@ const ResendVerificationEmail = () => {
             </div>
           </Box>
           <button
-            className="form-input-btn"
+            className="resend-input-btn"
             type="submit"
             onClick={async () => {
               let validation = validate(formValues);

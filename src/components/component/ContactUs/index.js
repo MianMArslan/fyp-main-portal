@@ -102,7 +102,7 @@ const ContactUs = ({ lightBg, lightText, id, imgStart, headline, topLine }) => {
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <form onSubmit={handleSubmit}>
-                  <Box sx={{ width: 650, maxWidth: "100%" }}>
+                  <Box sx={{ width: 650, maxWidth: "90%" }}>
                     <TextField
                       label="Name"
                       type="name"

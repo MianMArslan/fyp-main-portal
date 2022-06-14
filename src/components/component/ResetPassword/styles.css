@@ -1,4 +1,9 @@
 .reset{
     margin-top: 180px;
-
 }
+
+@media screen and (max-width: 768px) {
+    .reset{
+      margin-top: 100px;
+    }
+  }

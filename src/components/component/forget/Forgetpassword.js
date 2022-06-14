@@ -9,6 +9,7 @@ import Snackbar from "../snakebar";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { POST } from "../../../services/httpClient.js";
 import { Box } from "@mui/material";
+import "../ResetPassword/styles.css"
 
 const ForgetPassword = ({ submitForm }) => {
   const { handleChange, handleSubmit, values} = useForm(
@@ -51,7 +52,7 @@ const ForgetPassword = ({ submitForm }) => {
       <div className="login-content-left">
         <img className="login-img" src={img1} alt="" />
         <div className="login-content-right">
-          <form onSubmit={handleSubmit} className="login" noValidate>
+          <form onSubmit={handleSubmit} className="login reset" noValidate>
             <h1>Forget Password</h1>
             <Box
               sx={{

@@ -1,21 +1,50 @@
-.form-container {
-  margin: 10px auto;
+.resend-container {
+  margin: 50px auto;
   width: 1000px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
-  height: 590px;
+  height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 768px) {
+  .resend-container {
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    margin: 50px auto;
+  }
+}
 
-.form-content-left {
-  /* background-color: white; */
+.resend-content-left {
   border-radius: 10px 0 0 10px;
   position: relative;
 }
 
-.form-img {
+.resend-content-right {
+  border-radius: 0 10px 10px 0;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .resend-content-right{
+    margin-left: -150px;
+  }
+}
+
+.resend-h1 {
+  margin-top: 10px;
+  font-size: 25px;
+  margin-right: 140px;
+}
+@media screen and (max-width: 768px) {
+  .resend-h1{
+    font-size: 23px;
+    margin-right: 10px;
+  }
+}
+
+.resend-img {
   width: 80%;
   height: 80%;
   position: absolute;
@@ -23,10 +52,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 768px) {
+  .resend-img{
+    display: none;
+  }
+}
 
-.form {
+.resend {
   position: absolute;
-  transform: translate(-50%, -50%);
   width: 90%;
   height: 100%;
   display: flex;
@@ -34,51 +67,27 @@
   justify-content: center;
   align-items: center;
 }
-
-.form h1 {
-  font-size: 1.7rem;
-  text-align: start;
-  width: 100%;
-  margin-left: 20px;
-  color: black;
-}
-
-.form-inputs {
+.resend-inputs {
   margin-bottom: 0.5rem;
   width: 80%;
 }
-
-.form-inputs p {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-  color: #f00e0e;
+@media screen and (max-width: 768px) {
+  .resend-inputs{
+    width: 105%;
+  }
 }
 
-.form-label {
+.resend-label {
   display: inline-block;
   font-size: 0.8rem;
   margin-bottom: 6px;
   color: black;
 }
-
-.form-input {
-  display: block;
-  padding-left: 10px;
-  border-radius: 2px;
-  height: 40px;
-  width: 100%;
-  /* border: solid; */
-}
-
-.form-input::placeholder {
-  color: #595959;
-  font-size: 12px;
-}
-
-.form-input-btn {
+.resend-input-btn {
   width: 30%;
   height: 50px;
   margin-top: 25px;
+  margin-right: 70px;
   border-radius: 25px;
   outline: none;
   border: none;
@@ -87,7 +96,13 @@
   background-color: #fcdc00;
 }
 
-.form-input-btn:hover {
+@media screen and (max-width: 768px) {
+  .resend-input-btn{
+    width: 40%;
+    margin-right: 0px ;
+  }
+}
+.resend-input-btn:hover {
   cursor: pointer;
   background-color: #ff8d33;
   transition: all 0.4s ease-out;

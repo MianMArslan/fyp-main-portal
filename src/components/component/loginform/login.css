@@ -9,6 +9,15 @@
   grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width: 768px) {
+  .login-container{
+    width: 350px;
+    height: 500px;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+}
+
 .login-content-left {
   border-radius: 10px 0 0 10px;
   position: relative;
@@ -24,6 +33,11 @@
   left: 40%;
   transform: translate(-40%, -40%);
 }
+@media  screen and (max-width:768px) {
+  .login-img{
+    display: none;
+  }  
+}
 
 .login-content-right {
   border-radius: 0 10px 10px 0;
@@ -36,7 +50,7 @@
   font-size: 2rem;
   text-align: start;
   width: 80%;
-  margin-left: 50px;
+  margin-left: 30px;
   margin-bottom: 1rem;
   color: black;
 }
@@ -45,6 +59,13 @@
   margin-bottom: 0.5rem;
   width: 80%;
   margin-left: 50px;
+}
+
+@media screen and (max-width: 768px){
+    .login-inputs{
+      margin-left: 25px;
+      width: 55%;
+   }
 }
 
 .login-input-btn {
@@ -61,6 +82,12 @@
   font-weight: bold;
 }
 
+@media screen and (max-width:768px) {
+  .login-input-btn{
+    margin-left: 120px;
+}
+}
+
 .login-input-btn:hover {
   cursor: pointer;
   background-color: #ffa000;
@@ -75,7 +102,7 @@
   transform: translateX(320px) translateY(-40px);
   font-size: 1.6rem;
   padding: 0.15rem;
-  margin-left: 5.5rem;
+  margin-left: 85px;
   cursor: pointer;
   background-color: transparent;
   outline: none;
@@ -84,11 +111,25 @@
   margin-bottom: -100%;
   font-weight: bold;
 }
+
+@media screen and (max-width:768px) {
+  .login-btn{
+    margin-left: -49px;
+    padding: 10px;
+    margin-top: 0.5px;
+  }
+}
+
 .login-input-forgetpassword {
   font-size: 0.8rem;
   color: black;
   width: 80%;
-  margin-left: 450px;
+  margin-left: 380px;
+}
+@media screen and (max-width:768px) {
+  .login-input-forgetpassword{
+    margin-left: 230px;
+  }
 }
 .login-input-resendVerificationEmail {
   font-size: 0.8rem;
@@ -97,6 +138,11 @@
   margin-top: 20px;
   margin-left: 15%;
   font-weight: 600;
+}
+@media screen and (max-width:768px) {
+  .login-input-resendVerificationEmail{
+    margin-left: 6%;
+  }
 }
 .login-input-resendVerificationEmail a {
   text-decoration: none;
